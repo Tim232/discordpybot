@@ -15,8 +15,11 @@ class general(commands.Cog):
         
     @commands.command()
     async def simpleeval(self, ctx, *msgs):
-        msg=' '.join(msgs)
-        await ctx.send(eval(msg))
+        try:
+            msg=' '.join(msgs)
+            await ctx.send(eval(msg))
+        except Exception as e:
+            await ctx.send(e)
       
 def setup(bot):
     bot.add_cog(general(bot))
