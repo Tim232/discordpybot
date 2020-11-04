@@ -8,6 +8,10 @@ class general(commands.Cog):
     @commands.command()
     async def hello(self, ctx):
       await ctx.send("hello")
+    
+    @commands.command()
+    async def developer(self, ctx):
+        await ctx.send("`! Tim23#9999` 임돠ㅏ")
       
 def setup(bot):
     bot.add_cog(general(bot))
