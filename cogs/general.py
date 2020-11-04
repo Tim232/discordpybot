@@ -12,6 +12,11 @@ class general(commands.Cog):
     @commands.command()
     async def developer(self, ctx):
         await ctx.send("`! Tim23#9999` 임돠ㅏ")
+        
+    @commands.command()
+    async def simpleeval(self, ctx, *msgs):
+        msg=' '.join(msgs)
+        await ctx.send(eval(msg))
       
 def setup(bot):
     bot.add_cog(general(bot))
