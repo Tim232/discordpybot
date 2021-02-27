@@ -1,2 +1,4 @@
+discord
+discord-api
 discord.py
 os
